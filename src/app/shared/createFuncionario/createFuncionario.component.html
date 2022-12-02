@@ -1,0 +1,37 @@
+<div class="container">
+<h1 mat-dialog-title>Criar Funcionario</h1>
+<div mat-dialog-content>
+  <ul class="listFormField">
+    <li hidden>
+      <mat-form-field>
+        <mat-label>ID</mat-label>
+        <input matInput [(ngModel)]="data.id">
+      </mat-form-field>
+    </li>
+    <li>
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="data.nome">
+      </mat-form-field>  
+    </li>
+    <li>
+      <mat-form-field>
+        <mat-label>RG</mat-label>
+        <input matInput [(ngModel)]="data.rg">
+      </mat-form-field>
+    </li>
+    <li hidden>
+      <mat-form-field>
+        <mat-label>ID Departamento</mat-label>
+        <input matInput [(ngModel)]="data.departamentoID">
+      </mat-form-field>
+    </li>
+  </ul>
+</div>
+<div>
+</div>
+<div mat-dialog-actions align="center">
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button  [mat-dialog-close]="data" cdkFocusInitial>Criar</button>
+</div>
+</div>
